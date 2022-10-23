@@ -11,6 +11,13 @@ router.get("/", async (ctx: Context) => {
     message: "Hello World",
   };
 });
+
+router.get("/users", async (ctx: Context) => {
+  ctx.body = {
+    message: "Hello Users",
+  };
+});
+
 app.use(router.routes());
 
 app.listen(PORT);
